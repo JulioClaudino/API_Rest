@@ -4,7 +4,7 @@ var _bcryptjs = require('bcryptjs'); var _bcryptjs2 = _interopRequireDefault(_bc
  class User extends _sequelize.Model {
   static init(sequelize) {
     super.init({
-      nome: {
+      name: {
         type: _sequelize2.default.STRING,
         defaultValue: '',
         validate: {

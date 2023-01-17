@@ -2,8 +2,8 @@
 
 module.exports = {
   /* SQLite */
-  //dialect: 'sqlite',
-  //storage: './db.sqlite',
+  dialect: 'sqlite',
+  storage: './db.sqlite',
 
   /* MySQL / MariaDB */
   host: process.env.DATABASE_HOST,
@@ -13,9 +13,9 @@ module.exports = {
   database: process.env.DATABASE,
   dialect: 'mysql',
   dialectOptions: {
-    timezone: 'America/Sao_Paulo',
+    timezone: 'local',
   },
-  timezone: 'America/Sao_Paulo',
+  timezone: 'local',
 
   /* ALL */
   define: {
