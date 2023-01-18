@@ -26,6 +26,13 @@ export default class User extends Model {
           },
         },
       },
+      permission: {
+        type: Sequelize.STRING,
+        defaultValue: '',
+        unique: {
+          msg: 'Essa permissão já existe',
+        },
+      },
       password_hash: {
         type: Sequelize.STRING,
         defaultValue: '',

@@ -13,16 +13,16 @@ module.exports = {
   database: process.env.DATABASE,
   dialect: 'mysql',
   dialectOptions: {
-    timezone: 'America/Sao_Paulo',
+    timezone: '-03:00',
   },
-  timezone: 'America/Sao_Paulo',
+  timezone: '-03:00',
 
   /* ALL */
-  define: {
-    timestamps: true,
-    underscored: true,
-    underscoredAll: true,
-    createdAt: 'created_at',
-    updatedAt: 'updated_at',
-  },
+  // define: {
+  //   timestamps: true,
+  //   underscored: true,
+  //   underscoredAll: true,
+  //   createdAt: 'created_at',
+  //   updatedAt: 'updated_at',
+  // },
 };
