@@ -4,11 +4,11 @@ class UserController {
   async store(req, res) {
     try {
       const novoUser = await User.create(req.body);
-      const { id, name, email } = novoUser;
-      return res.json({ id, name, email });
+      const { id, name, email, permission } = novoUser;
+      return res.json({ id, name, email, permission });
     } catch (e) {
       return res.status(400).json({
-        errors: e.errors.map((err) => err.message),
+        errors: e
       });
     }
   }
@@ -16,7 +16,7 @@ class UserController {
   // Index
   async index(req, res) {
     try {
-      const users = await User.findAll({ attributes: ['id', 'name', 'email'] });
+      const users = await User.findAll({ attributes: ['id', 'name', 'email', 'permission'] });
       return res.json(users);
     } catch (e) {
       return res.json(null);
@@ -28,8 +28,8 @@ class UserController {
     try {
       const user = await User.findByPk(req.params.id);
 
-      const { id, name, email } = user;
-      return res.json({ id, name, email });
+      const { id, name, email, permission } = user;
+      return res.json({ id, name, email, permission });
     } catch (e) {
       return res.json(null);
     }
@@ -47,8 +47,8 @@ class UserController {
       }
 
       const novosDados = await user.update(req.body);
-      const { id, name, email } = novosDados;
-      return res.json({ id, name, email });
+      const { id, name, email, permission } = novosDados;
+      return res.json({ id, name, email, permission });
     } catch (e) {
       return res.status(400).json({
         errors: e.errors.map((err) => err.message),

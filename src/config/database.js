@@ -18,11 +18,11 @@ module.exports = {
   timezone: '-03:00',
 
   /* ALL */
-  // define: {
-  //   timestamps: true,
-  //   underscored: true,
-  //   underscoredAll: true,
-  //   createdAt: 'created_at',
-  //   updatedAt: 'updated_at',
-  // },
+  define: {
+    timestamps: true,
+    underscored: true,
+    underscoredAll: true,
+    createdAt: 'created_at',
+    updatedAt: 'updated_at',
+  },
 };
